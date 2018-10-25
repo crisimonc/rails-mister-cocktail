@@ -1,0 +1,10 @@
+<h1><%= "Our Cocktails (" + @cocktails.length.to_s + ")" %></h1>
+<div class="cocktails">
+<% @cocktails.each do |cocktail| %>
+    <div class="card">
+	  <p><%= cocktail.name %></p>      
+	  <%= link_to "More Info", cocktail_path(cocktail), class: "more-info" %>
+      <br>
+	</div>
+	<% end %>
+</div>

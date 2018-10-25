@@ -5,6 +5,10 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+Cocktail.destroy_all
+Ingredient.destroy_all
+
+puts "destroying the world"
 
 require 'json'
 require 'open-uri'
@@ -21,3 +25,11 @@ json_ingredient = JSON.parse(api_call_ingredient)
 json_ingredient["drinks"].each do |element|
   Ingredient.create(name: element["strIngredient1"])
 end
+
+cocktail_names = ["Gibson", "Gimlet", "Gin and tonic", "Gin buck", "Gin Fizz", "Gin Sour", "Greyhound", "Hanky-Panky", "John Collins"] 
+
+cocktail_names.each do |name|
+  Cocktail.create(name: name)
+end
+
+puts "creating a new world"
