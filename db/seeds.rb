@@ -27,7 +27,7 @@ json_ingredient["drinks"].each do |element|
   Ingredient.create(name: element["strIngredient1"])
 end
 
-cocktail_names = ["Gibson", "Gimlet", "Gin and tonic", "Gin buck", "Gin Fizz", "Gin Sour", "Greyhound", "Hanky-Panky", "John Collins"] 
+cocktail_names = ["Gibson", "Gimlet", "Gin & Tonic", "Gin Buck", "Gin Fizz", "Gin Sour", "Greyhound", "Hanky Panky", "John Collins"] 
 
 cocktail_names.each do |name|
   Cocktail.create(name: name)

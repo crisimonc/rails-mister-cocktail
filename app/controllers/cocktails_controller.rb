@@ -1,7 +1,7 @@
 class CocktailsController < ApplicationController
  
   def index
-    @cocktails = Cocktail.all
+    @cocktails = Cocktail.all.order(created_at: :desc)
   end
 
   def show
@@ -13,7 +13,7 @@ class CocktailsController < ApplicationController
   end
 
   def create
-    @cocktail - Cocktail.new(cocktail_params)
+    @cocktail = Cocktail.new(cocktail_params)
     @cocktail.save
     redirect_to cocktails_path
   end
