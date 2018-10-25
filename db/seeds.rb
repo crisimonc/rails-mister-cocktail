@@ -5,6 +5,7 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+Dose.destroy_all
 Cocktail.destroy_all
 Ingredient.destroy_all
 
@@ -33,3 +34,7 @@ cocktail_names.each do |name|
 end
 
 puts "creating a new world"
+
+100.times do
+Dose.create(cocktail_id: Cocktail.all.pluck(:id).sample, ingredient_id: Ingredient.all.pluck(:id).sample, description: "#{rand(100..300)} ml")
+end

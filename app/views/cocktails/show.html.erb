@@ -1,5 +1,8 @@
 <div class="cocktail">
   <h2><%= @cocktail.name %></h2>
   <h3>Ingredients</h3>
-	 
+	 <% @cocktail.ingredients.each do |ingredient| %>
+	 	<p><%= ingredient.name + ":" %><%= ingredient.doses.first.description %></p>
+	 <% end %>
+	 </%>
 </div>
