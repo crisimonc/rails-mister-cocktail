@@ -1,11 +1,13 @@
 <div class="cocktail">
 	<h2>Your new cocktail</h2>
-	<%= form_for(@cocktail) do |f| %>
+	<%= simple_form_for(@cocktail) do |f| %>
 	  <%= f.label :name%>
 	  <br>
 	  <%= f.text_field :name%>
 	  <br>
 	  <br>
+	  <%= f.input :upload %>
+      <%= f.input :upload_cache, as: :hidden %>
 	  <%= f.submit %>
 	<% end %>
 </div>
