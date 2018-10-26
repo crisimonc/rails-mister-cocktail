@@ -1,0 +1,31 @@
+.pic {
+	border-radius: 5px;
+    border: 30px solid white;
+    height: 400px;
+}
+
+.cocktail {
+	display: flex;
+    color: white;
+    text-decoration: none;
+    justify-content: space-around;
+    padding: 20px;
+    font-weight: strong;
+}
+
+
+.cocktail a {
+	text-decoration: none;
+	font-size: 14px;
+	color: #363636;
+}
+
+.add a {
+	font-size: 16px;
+
+}
+
+.add:hover {
+	font-size: 18px;
+	transition: ease 0.3s;
+}

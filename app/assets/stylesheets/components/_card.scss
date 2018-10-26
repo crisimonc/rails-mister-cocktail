@@ -8,21 +8,34 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  margin: 10px;
+  margin: 15px;
   padding: 0.3em;
-  border-radius: 3px;
+  border-radius: 5px 30px 5px 30px;
   border: 4px solid white;
 }
 
+.card p {
+	text-align: center;
+}
+
 .more-info {
+  text-align: center;
   color: white;
   text-decoration: none;
+  font-size: 15px;
+  font: italic;
+}
+
+
+.card:hover {
+  border-radius: 30px 5px 30px 5px;
+  transition: ease 0.4s;
 }
 
 .more-info:hover {
   color: white;
   text-decoration: none;
-  font-size: 20px;
+  font-size: 16px;
   transition: ease 0.3s;
 }
 
