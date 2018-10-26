@@ -1,10 +1,19 @@
-<h1><%= "Our Cocktails (" + @cocktails.length.to_s + ")" %></h1>
-<p><%= link_to "Add a cocktail", new_cocktail_path, class: "add" %></p>
+
 <div class="cocktails">
-<% @cocktails.each do |cocktail| %>
-    <div class="card">
-	  <p><%= cocktail.name + " " %><%= link_to "More Info", cocktail_path(cocktail), class: "more-info" %></p>      
-      <br>
-	</div>
-	<% end %>
+  <h1><%= "Cocktails" %></h1>
+  <div class="container">
+    <div class="row">
+      <% @cocktails.each do |cocktail| %>
+        <div class="col-xs-12 col-sm-4">
+        	<div class="card">
+	          <h3><%= cocktail.name + " " %></h3>
+	          <br>
+	          <p><%= link_to "More Info", cocktail_path(cocktail), class: "more-info" %></p>      
+	        </div>
+	    </div>
+	   <% end %>
+    </div>
+
+  </div>
+  
 </div>
