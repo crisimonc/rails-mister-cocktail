@@ -10,7 +10,9 @@
 	 <p><%= link_to "Add an ingredient", new_cocktail_dose_path(@cocktail.id), class: "add" %></p>  
 	 </div>
   <%= image_tag(@cocktail.picture, class: "pic") if @cocktail.picture%>
-  <%= cl_image_tag @cocktail.upload, class: "pic" if @cocktail.upload%>
+  <% if @cocktail.upload != nil%>
+  <%= cl_image_tag(@cocktail.upload) %>
+  <% end %>
 </div>
 
 
